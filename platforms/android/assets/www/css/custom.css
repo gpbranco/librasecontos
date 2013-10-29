@@ -1,0 +1,319 @@
+body {
+	background: black;
+	font-family: helvetica;
+	margin: 0;
+}
+
+.app {
+	background: url('../src/img/bg.png') no-repeat top left;;
+	height: 738px;
+	margin: 0 auto;
+	position: relative;
+	width: 555px;
+}
+
+.book header {
+	background-color: #42405f;
+	overflow: auto;
+	margin-bottom: 15px;
+	padding: 20px 0;
+}
+
+h1 {
+	/*background: green;*/
+	color: white;
+	line-height: 40px;
+	margin: 0;
+	min-height: 40px;
+	text-align: center;
+}
+
+ol {
+	overflow: auto;
+}
+
+li {
+	background: white;
+	/*border-color: rgb(50, 50, 50);
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	border-style: solid;
+	border-width: 1px;*/
+	list-style: none;
+	position: relative;
+}
+
+button {
+	border: none;
+}
+
+/*=== Book properties ===*/
+
+.pages_container {
+	height: 623px;
+	width: 524px;
+}
+
+.book_page {
+	background: url('../src/img/livro_bg.png') no-repeat 27px bottom;
+	background-size: 471px 344px;
+	height: 100%;
+	width: 100%;
+}
+
+.book_page.custom_bg {
+	background-size: auto 344px;
+}
+
+.page_face {
+	background: url('../src/img/livro_hollow.png') no-repeat top left;
+	box-sizing: border-box;
+	height: 100%;
+	padding: 30px;
+	width: 100%;
+}
+
+.sentence_container p{
+	margin: 0 auto;
+	font-size: 25px;
+	padding: 0 20px;
+}
+
+/*=== Menu properties ===*/
+.menu_container {
+	background: url('../src/img/menu.png') no-repeat top left;
+	height: 232px;
+	margin-top: -116px;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	width: 112px;
+}
+
+.media_buttons {
+	margin: 20px 0;
+	padding: 0;
+	width: 100%;
+}
+
+.media_buttons li {
+	background: none;
+	height: 50px;
+	margin: 10px 0 10px 50px;
+	width: 50px;
+}
+
+.menu_container.small {
+	background: url('../src/img/menu_small.png') no-repeat top left;
+	height: 190px;
+	margin-top: -95px;
+	width: 92px;
+}
+
+.media_buttons li:nth-of-type(2){
+	margin-left: 15px;
+}
+
+.media_buttons button {
+	background: none;
+	border-radius: 25px;
+	cursor: pointer;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.media_buttons > .active {
+	background: blue;
+}
+
+.media_buttons .active {
+	background: #711266
+}
+
+.media_buttons li img {
+	margin: 0 auto;
+}
+
+.media_buttons li p {
+	color: white;
+	font-size: 8px;
+	font-weight: bold;
+	margin:	0;
+}
+
+.reload_medias {
+	background: url('../src/img/reload.png') no-repeat center center;
+	border: none;
+	position: absolute;
+	height: 44px;
+	margin: -22px -9px 0 0;
+	right: 0;
+	top : 50%;
+	width: 44px;
+}
+
+.small .media_buttons {
+	margin: 6px 0;
+}
+
+.small .media_buttons li {
+	margin: 7px 0 5px 38px;
+}
+
+.small .media_buttons li:nth-of-type(2){
+	margin-left: 8px;
+}
+
+/*=== Overlay Properties ===*/
+.overlay {
+	background: rgba(0,0,0,.5);
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.overlay .media_container {
+	background: white;
+	border-radius: 5px;
+	height: 440px;
+	left: 50%;
+	margin: -220px 0 0 -240px;
+	position: absolute;
+	top: 50%;
+	width: 481px;
+}
+
+.overlay_container .close_overlay {
+	background: url('../src/img/bt-fechar.png') no-repeat center center;
+	border-radius: 11px;
+	color: white;
+	cursor: pointer;
+	height: 25px;
+	float: right;
+	margin-top: -12px;
+	margin-right: 12px;
+	width: 25px;
+}
+
+.overlay_container .overlay_sentence {
+	font-size: 24px;
+	font-weight: bold;
+	padding: 0 15px;
+}
+
+/*=== Video Player Properties ===*/
+.player_container {
+	background: black;
+	height: 200px;
+}
+
+.player_container .player_screen {
+	margin: 0 auto;
+	width: 356px;
+}
+
+.video_container {
+	width: 470px;
+	margin: 0 auto;
+}
+
+.player_controllers {
+	height: 75px;
+	margin: 5px auto;
+	width: 160px;
+}
+
+.player_controllers button {
+	cursor: pointer;
+	float: left;
+	height: 59px;
+	margin: 0 10px;
+	padding: 0;
+	width: 59px;
+}
+
+.player_controllers .play_button {
+	background: url('../src/img/bt-play.png') no-repeat center center;
+}
+
+.player_controllers .pause_button {
+	background: url('../src/img/bt-pausar.png') no-repeat center center;
+}
+
+/*=== Sign Writing Properties ===*/
+
+.signs_container {
+	border-color: black;
+	border-radius: 5px;
+	border-style: solid;
+	border-width: 1px;
+	margin: 0 auto;
+	width: 355px;
+}
+
+.signs_container ol {
+	margin: 0;
+	padding: 0;
+}
+
+.signs_container li {
+	background: white;
+	height: 100px;
+	float: left;
+	margin: 9px;
+	width: 100px;
+}
+
+.image_replacement {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	height: 100%;
+}
+
+/*=== Page Navigation Properties ===*/
+.page_navigation_container div {
+	overflow: auto;
+}
+
+.navigator_holder {
+	background: white;
+	border-radius: 22px;
+	bottom: 5px;
+	font-size: 22px;
+	height: 44px;
+	line-height: 44px;
+	position: absolute;
+	right : 5px;
+	text-align: center;
+	width: 88px;
+}
+
+.navigator_holder div {
+	display: inline-block;
+}
+
+
+.navigator_holder .navigation_button {
+	cursor: pointer;
+	font-family: impact;
+	font-size: 30px;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 0;
+}
+
+.navigator_holder .left_arrow {
+	left: 5px;
+}
+
+.navigator_holder .right_arrow {
+	right: 5px;
+}
+
+

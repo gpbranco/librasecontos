@@ -1,0 +1,71 @@
+{
+	"title" : "Direito de Brasileiro",
+	"sentences" : [{
+			"text" : "O brasileiro tem direito de aprender a história do Brasil escrita no próprio idioma.",
+			"content" : [
+				{
+					"sign" : "brasileiro",
+					"text" : "Brasileiro",
+					"range" : {
+						"start" : 0,
+						"count" : 2
+					}
+				},{
+					"sign" : "ter",
+					"text" : "ter",
+					"range" : {
+						"start" : 2,
+						"count" : 1
+					}
+				},{
+					"sign" : "direito",
+					"text" : "direito",
+					"range" : {
+						"start" : 3,
+						"count" : 1
+					}
+				},{
+					"sign" : "aprender",
+					"text" : "aprender",
+					"range" : {
+						"start" : 5,
+						"count" : 1
+					}
+				},{
+					"sign" : "historia",
+					"text" : "historia",
+					"range" : {
+						"start" : 6,
+						"count" : 2
+					}
+				},{
+					"sign" : "brasil",
+					"text" : "Brasil",
+					"range" : {
+						"start" : 9,
+						"count" : 1
+					}
+				},{
+					"sign" : "escrita",
+					"text" : "escrita",
+					"range" : {
+						"start" : 10,
+						"count" : 1
+					}
+				},{
+					"sign" : "idioma",
+					"text" : "idioma",
+					"range" : {
+						"start" : 13,
+						"count" : 1
+					}
+				},{
+					"sign" : "proprio",
+					"text" : "próprio.",
+					"range" : {
+						"start" : 12,
+						"count" : 1
+					}
+				}]
+		}]
+}

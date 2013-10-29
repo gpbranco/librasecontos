@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Libras e Contos</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=556">
+        <meta name="viewport" content="minimum-scale=1">
+        <meta name="viewport" content="maximum-scale=2">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <!--<link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">-->
+		<link rel="stylesheet" href="css/custom.css">
+    </head>
+    <body>
+        <!--<div class="ipad">-->
+        <div class="app"></div>
+
+        <!--</div>-->
+        <script data-main="src/boot" src="js/vendor/require.js" type="text/javascript"></script>
+        <script src="js/vendor/require-config.js" type="text/javascript"></script>
+
+        <!-- Templates -->
+
+        <script id="book_template" type="text/template">
+            <header>
+                <h1><%= title %></h1>
+            </header>
+            <div class="pages_container"></div>
+            <div class="page_navigation_container"></div>
+            <div class="overlay_container"></div>
+            <div class="menu_container"></div>
+        </script>
+
+        <script id="book_page_template" type="text/template">
+            <div class="page_face">
+                <div class="sentence_container">
+                    <p><%= sentence.text %></p>
+                </div>
+            </div>
+        </script>
+
+        <script id="menu_template" type="text/template">
+            <ol class="media_buttons">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ol>
+        </script>
+
+        <script id="menu_button_template" type="text/template">
+            <img src=src/img/<%= icon %>>
+            <p><%= description %></p>
+        </script>
+
+        <script id="overlay_template" type="text/template">
+            <div class="media_container">
+                <button class="close_overlay"></button>
+                <p class="overlay_sentence"><%= text %></p>
+                <div class="media_holder"></div>
+                </div>
+            </div>
+        </script>
+
+        <script id="video_template" type="text/template">
+            <div class="player_container">
+                <div class="player_screen">
+                    <div id="video_player"></div>
+                </div>
+            </div>
+            <div class="player_controllers">
+                <button class="play_button"></button>
+                <button class="pause_button"></button>
+            </div>
+        </script>
+
+        <script id="signs_template" type="text/template">
+            <ol class="signs_list"></ol>
+        </script>
+
+        <script id="sign_list_item_template" type="text/template">
+            <li>
+                <div class="image_replacement" style="background-image: url(library/<%= sign %>.png)">
+            </li>
+        </script>
+
+        <script id="page_navigator_template" type="text/template">
+            <div class="navigator_holder">
+                <p class="navigation_button left_arrow"><</p>
+                <div class="page_number_holder">
+                    <span><%= current %></span><span>/</span><span><%= max %></span>
+                </div>
+                <p class="navigation_button right_arrow">></p>
+            </div>
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,96 @@
+{
+	"title" : "Uma menina chamada Kauana",
+	"sentences" : [{
+		"text" : "Oi! O meu nome é Kauana, o meu sinal é este.",
+		"content" : [
+			{
+				"sign" : "oi",
+				"text" : "Oi!",
+				"range" : {
+					"start" : 0,
+					"count" : 1
+				}
+			},{
+				"sign" : "meu",
+				"text" : "Meu",
+				"range" : {
+					"start" : 2,
+					"count" : 1
+				}
+			},{
+				"sign" : "nome",
+				"text" : "nome",
+				"range" : {
+					"start" : 3,
+					"count" : 1
+				}
+			},{
+				"sign" : "kauana",
+				"text" : "Kauana.",
+				"range" : {
+					"start" : 5,
+					"count" : 1
+				}
+			},{
+				"sign" : "meu",
+				"text" : "Meu",
+				"range" : {
+					"start" : 7,
+					"count" : 1
+				}
+			},{
+				"sign" : "sinal",
+				"text" : "sinal",
+				"range" : {
+					"start" : 8,
+					"count" : 1
+				}
+			},{
+				"sign" : "kauana_sinal",
+				"text" : "este.",
+				"range" : {
+					"start" : 9,
+					"count" : 2
+				}
+			}]
+		},{
+		"text" : "Aquela é a minha casa, ela é amarela.",
+		"content" : [
+			{
+				"sign" : "aquela",
+				"text" : "Aquela é",
+				"range" : {
+					"start" : 0,
+					"count" : 2
+				}
+			},{
+				"sign" : "meu",
+				"text" : "minha",
+				"range" : {
+					"start" : 3,
+					"count" : 1
+				}
+			},{
+				"sign" : "casa",
+				"text" : "casa",
+				"range" : {
+					"start" : 4,
+					"count" : 1
+				}
+			},{
+				"sign" : "aquela",
+				"text" : "ela é",
+				"range" : {
+					"start" : 5,
+					"count" : 2
+				}
+			},{
+				"sign" : "amarelo",
+				"text" : "amarela.",
+				"range" : {
+					"start" : 7,
+					"count" : 1
+				}
+			}]
+		}]
+}
