@@ -38,6 +38,6 @@ define([
 				this.mediaHolder.show(new SignsView({model : this.model}));
 			}
 		});
-		
+
 		return Overlay;
 });

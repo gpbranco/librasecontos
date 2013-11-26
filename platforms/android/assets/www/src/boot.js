@@ -3,6 +3,6 @@ define([
 	'jquery'
 ], function (Application, $) {
    $(document).ready(function(){
-		(new Application()).start();
+    Application.start();
    });
 });

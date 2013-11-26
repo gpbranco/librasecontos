@@ -1,43 +1,127 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
-<html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Libras e Contos</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=556">
+        <meta name="viewport" content="minimum-scale=1">
+        <meta name="viewport" content="maximum-scale=2">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <!--
+        <link rel="stylesheet" href="css/main.css">-->
+        <link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/custom.css">
     </head>
     <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
+        <!--<div class="ipad">-->
+        <div class="application"></div>
+        <div class="overlay"></div>
+
+        <!--</div>-->
+        <script data-main="src/boot" src="js/vendor/require.js" type="text/javascript"></script>
+        <script src="js/vendor/require-config.js" type="text/javascript"></script>
+
+        <!-- Templates -->
+
+        <script id="landing-page-template" type="text/template">
+            <section class='product-description'>
+                <header>
+                    <h1 class="ir">Libras e Contos</h1>
+                    <h3>Aprender e Ensinar português Escrito com o auxílio de Libras ficou mais fácil</h2>
+                    <h4>Lorem ipsum dolor sit amet</h3>
+                    <div class="video-button" data-video='{"id" : "y73TyRn50D8"}'></div>
+                </header>
+            </section>
+            <section class="book-shelf">
+                <header>
+                    <h2 class="ir">Livros</h2>
+                    <h3>Mergulhe nos contos abaixo e com seus personagens, aprenda e melhore seu português</h3>
+                </header>
+                <nav></nav>
+            </section>
+            <footer>
+                <p>Libras e Contos - Alfabetização do Português através de Libras é um projeto</p>
+                <p class="bravi-logo ir">Bravi Software</p>
+            </footer>
         </script>
+
+        <script id="shelf-book-template" type="text/template">
+            <div class="cover-content">
+                <div class="cover-illustration"></div>
+                <div class="book-title">
+                    <p><%= title.text %></p>
+                    <div class="video-button"></div>
+                </div>
+            </div>
+        </script>
+
+        <script id="open-book-section-template" type="text/template">
+            <header>
+                <h1><%= title.text %></h1>
+                <button class="home-button">Home</button>
+                <div class="video-button"></div>
+            </header>
+            <div class="book-table">
+                <div class="book-container"></div>
+                <nav class="book-pages-nav">
+                    <button class="prev-page">Prev Page</button>
+                    <button class="next-page">Next page</button>
+                </nav>
+            </div>
+        </script>
+
+        <script id="book-view-template" type="text/template">
+            <section class="cover-container">
+            </section>
+            <section class="page-container left-page">
+            </section>
+            <section class="page-container right-page">
+            </section>
+        </script>
+
+        <script id="book-cover-template" type="text/template">
+            <div class="cover-background"></div>
+            <img src="src/img/book-cover-bg.png">
+        </script>
+
+        <script id="book-right-page-template" type="text/template">
+            <p><%= text %></p>
+            <% if (typeof(illustrationPath) != "undefined") { %>
+            <div class="image-frame-container">
+                <div class="page-illustration" style="background-image: url(<%=illustrationPath%>)"></div>
+                <img class="image-frame" src='src/img/image-frame.png' >
+            </div>
+            <% } %>
+        </script>
+
+        <script id="book-left-page-template" type="text/template">
+            <% if (typeof(video) != "undefined") { %>
+                <div class="video-frame">
+                    <div class="video-container">
+                        <div id="video-player"></div>
+                    </div>
+                    <div class="video-controllers">
+                        <button class="play-button">Play</button>
+                        <button class="pause-button">Play</button>
+                    </div>
+                </div>
+            <% } %>
+        </script>
+
+        <script id="overlay-template" type="text/template">
+            <div class="overlay-content">
+                <button class="close-overlay-button">X</button>
+                <div id="video-player">
+                </div>
+            </div>
+        </script>
+
     </body>
 </html>

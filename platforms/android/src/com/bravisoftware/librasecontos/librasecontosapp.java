@@ -31,7 +31,7 @@ public class librasecontosapp extends CordovaActivity
         super.init();
         // Set by <content src="index.html" /> in config.xml
        // super.loadUrl(Config.getStartUrl());
-        super.loadUrl("file:///android_asset/www/index_lec.html");
+        super.loadUrl("file:///android_asset/www/index.html");
     }
 }
 
