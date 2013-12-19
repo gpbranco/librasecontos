@@ -1,0 +1,138 @@
+.limited-width(@width: 980px) {
+  width: @width;
+  margin: 0 auto;
+}
+
+.gradient (@fromColor, @toColor) {
+  background: @toColor;
+  background: -webkit-gradient(linear, left top, left bottom, from(@fromColor), to(@toColor));
+  background: -moz-linear-gradient(top,  @fromColor,  @toColor);
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='@fromColor', endColorstr='@toColor');
+
+  &:hover {
+    background: @fromColor;
+    background: -webkit-gradient(linear, left top, left bottom, from(@toColor), to(@fromColor));
+    background: -moz-linear-gradient(top,  @toColor,  @fromColor);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='@toColor', endColorstr='@fromColor');
+  }
+}
+
+.contact {
+  .limited-width;
+  header .ir {
+    background: url('../src/img/contact.png') no-repeat top left;
+    height: 113px;
+    width: 227px;
+    margin: 0 auto 1em auto;
+  }
+
+  h3 {
+    .limited-width(32em);
+    margin-bottom: 1em;
+  }
+
+  &.sending {
+    form {
+      display: none;
+    }
+
+    .loading {
+      display: block;
+    }
+  }
+
+  &.sent {
+    form {
+      display: none;
+    }
+
+    .server-message {
+      display: block;
+    }
+
+    &.success {
+      .success-message {
+        display: block;
+      }
+    }
+
+    &.fail {
+      .fail-message {
+        display: block;
+      }
+    }
+  }
+
+  .loading {
+    display: none;
+    margin: 2em auto;
+  }
+
+  .server-message {
+    .limited-width(32em);
+    display: none;
+    margin: 2em auto;
+
+    & > p {
+      display: none;
+      border: white solid 1px;
+      padding: 1em;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    button {
+      .gradient(#8560a8, #69468f);
+      height: 2.8em;
+      width: 7em;
+      margin: 0 auto;
+      display: block;
+      color: white;
+      outline: none;
+      border-radius: 5px;
+      text-indent: 0;
+    }
+  }
+
+  form {
+    .limited-width(32em);
+    input, textarea {
+      .box-sizing;
+      border: none;
+      border-radius: 5px;
+      display: block;
+      height: 2.8em;
+      margin: 1.1em 0;
+      padding-left: .5em
+    }
+
+    input {
+      width: 48%;
+      outline: none;
+    }
+
+    input[name="name"] {
+      float: left;
+    }
+
+    input[name="email"] {
+      float: right;
+    }
+
+    input[name="send"] {
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+
+      color: white;
+      .gradient(#8560a8, #69468f);
+    }
+
+    textarea {
+      height: 6.6em;
+      padding: .5em;
+      resize: none;
+      width: 100%;
+    }
+  }
+}

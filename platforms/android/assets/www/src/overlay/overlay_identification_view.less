@@ -1,0 +1,72 @@
+.identification-container {
+  padding: 1em;
+
+  .loading {
+    display: block;
+    margin: 8em auto;
+  }
+
+  .email-insertion, .server-unreachable-message {
+    display: none;
+  }
+
+  p {
+    color: white;
+    text-align: center;
+  }
+
+  &.waiting-email {
+    .loading {
+      display: none;
+    }
+
+    .email-insertion {
+      display: block;
+      margin-top: 5em;
+
+      input {
+        .box-sizing;
+        border: none;
+        border-radius: 5px;
+        display: block;
+        height: 2.8em;
+        margin: 1.1em 0;
+        padding-left: .5em;
+        width: 100%;
+      }
+    }
+
+    button {
+      .gradient(#8560a8, #69468f);
+      cursor: pointer;
+      height: 2.8em;
+      width: 7em;
+      margin: 0 auto;
+      display: block;
+      color: white;
+      outline: none;
+      border-radius: 5px;
+      text-indent: 0;
+
+      &:disabled {
+        background: #8560a8;
+        cursor: auto;
+        opacity: .5;
+      }
+    }
+  }
+
+  &.server-unreachable {
+    .loading {
+      display: none;
+    }
+
+    .server-unreachable-message {
+      border: white solid 1px;
+      border-radius: 5px;
+      display: block;
+      margin-top: 5em;
+      padding: 1em;
+    }
+  }
+}

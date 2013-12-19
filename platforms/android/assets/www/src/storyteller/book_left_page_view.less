@@ -1,0 +1,122 @@
+.left-page{
+  /*background: rgba(0,0,255,0.4);*/
+  float : left;
+  margin-left: 2.6em;
+
+  .page-content {
+    padding: 1em;
+    text-align: center;
+  }
+
+  .display-on-reveal(@display: block) {
+    display: none;
+
+    &.reveal {
+      display: @display;
+    }
+  }
+
+  .media-frame {
+    .display-on-reveal;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 1px gray;
+    height: 19em;
+    margin-top: 2em;
+    padding: .5em;
+
+    .video-frame {
+      .display-on-reveal;
+      .video-controllers {
+        background-color: #3c3366;
+        border-radius: 10px;
+        margin: 1em auto 0 auto;
+        text-align: center;
+        width: 70px;
+
+        button {
+          height: 20px;
+          width: 20px;
+        }
+
+        .play-button{
+          background: url('../src/img/play-bt.png') no-repeat left top;
+        }
+
+        .pause-button{
+          background: url('../src/img/pause-bt.png') no-repeat left top;
+        }
+      }
+
+      .video-container {
+        background: black;
+        height:16.5em;
+      }
+    }
+
+    .sw-frame {
+      .display-on-reveal;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+  }
+
+  .media-toggler {
+    &.reveal {
+      opacity: 1;
+
+      button {
+        cursor: pointer;
+      }
+    }
+
+    background-color: #acacac;
+    border-radius: .85em;
+    display: inline-block;
+    height: 1.7em;
+    margin-top: 4em;
+    opacity: .5;
+
+    button {
+      cursor: auto;
+      text-indent: 0;
+      height: 100%;
+      border-radius: .85em;
+      color: white;
+      padding: 0 1em;
+
+      &.selected {
+        background-color: #282148
+      }
+
+      .bt-icon {
+        background-repeat: no-repeat;
+        background-position: left center;
+        display: inline-block;
+        height: 100%;
+        float: left;
+        margin-right: .5em;
+        width: 16px;
+      }
+
+      .bt-text {
+        line-height: 1.7em;
+      }
+
+      &.video-toggle {
+        .bt-icon {
+          background-image: url('../src/img/video-toggle-icon.png');
+        }
+      }
+
+      &.sw-toggle {
+        .bt-icon {
+          background-image: url('../src/img/sw-toggle-icon.png');
+        }
+      }
+    }
+  }
+}

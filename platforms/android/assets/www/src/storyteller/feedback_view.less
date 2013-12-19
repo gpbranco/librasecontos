@@ -1,0 +1,104 @@
+.feedback {
+  padding: 1em;
+
+  &.sent, &.failed {
+    .questions {
+      display: none;
+    }
+
+    .response {
+      display: block;
+    }
+  }
+
+  &.sent {
+    .success-message {
+      display: block;
+    }
+  }
+
+  &.failed {
+    .fail-message {
+      display: block;
+    }
+  }
+
+  .questions {
+    ul {
+      background-color: rgba(255,0,0,.01);
+      -webkit-margin-before: 0;
+      -webkit-margin-after: 0;
+
+      list-style: none;
+
+      input[type="radio"] {
+        display: none;
+      }
+
+       p {
+        font-size: 1.1em;
+        font-weight: bold;
+       }
+
+      label {
+        border-radius: 9999px;
+        display: inline-block;
+        font-size: .8em;
+        margin: 0 .2em;
+        padding: .8em;
+        min-width: 3em;
+
+        &.selected {
+          background-color: #908793;
+        }
+
+        .face-ir {
+          background-repeat: no-repeat;
+          height: 24px;
+          margin: 0 auto;
+          width: 24px;
+        }
+
+        &.happy .face-ir{
+          background-image: url(../src/img/feedback-happy.png);
+        }
+
+        &.normal .face-ir{
+          background-image: url(../src/img/feedback-normal.png);
+        }
+
+        &.sad .face-ir{
+          background-image: url(../src/img/feedback-sad.png);
+        }
+      }
+    }
+
+    button {
+      .gradient(#8560a8, #69468f);
+      cursor: pointer;
+      height: 2em;
+      width: 7em;
+      margin: 0 auto;
+      margin-top: 2em;
+      display: block;
+      color: white;
+      outline: none;
+      border-radius: 5px;
+      text-indent: 0;
+
+      &:disabled {
+        background: #8560a8;
+        cursor: auto;
+        opacity: .5;
+      }
+    }
+  }
+
+  .response {
+    display: none;
+
+    p {
+      display: none;
+    }
+  }
+}

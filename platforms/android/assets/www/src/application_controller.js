@@ -1,11 +1,13 @@
 define([
   'marionette',
+  'underscore',
   'book_collection',
-  'landing_page_view',
-  'storyteller_view',
-  'overlay_view'
-  ], function (Marionette, BookCollection, LandingPageView, StorytellerView, OverlayView) {
+  'bookshelf/bookshelf_view',
+  'storyteller/storyteller_view',
+  'overlay/overlay_view'
+  ], function (Marionette, _,BookCollection, BookshelfView, StorytellerView, OverlayView) {
     var library = BookCollection;
+    var mustCheckID = false;
 
     var ApplicationController = Marionette.Controller.extend({
       initialize : function(options) {
@@ -15,30 +17,25 @@ define([
         setupOverlayRegion.call(this);
       },
 
-      showLandingPage : function() {
+      showBookshelf : function() {
         this.router.navigate('');
 
-        var landingPage = new LandingPageView({books : library});
+        var landingPage = new BookshelfView({books : library});
         landingPage.on('openBook', this.showStoryteller, this);
         landingPage.on('showVideo', showVideo, this);
         this.mainRegion.show(landingPage);
       },
 
       showStoryteller : function(book, pageNumber) {
-        if(!pageNumber){
-          pageNumber = 0;
+        if(!mustCheckID){
+          doShowStoryteller.call(this, book, pageNumber);
+          return;
         }
 
-        navigateToBookAtPage.call(this, book.id, pageNumber);
+        var overlayView = this.overlayRegion.currentView;
 
-        var storytellerView = new StorytellerView({model : book});
-        storytellerView.startingPage = pageNumber;
-        storytellerView.on("homeButtonTouched", this.showLandingPage, this);
-        storytellerView.on("changedPage", function (pageNumber) {
-          navigateToBookAtPage.call(this, book.id, pageNumber);
-        }, this);
-
-        this.mainRegion.show(storytellerView);
+        overlayView.on('identified', _.bind(doShowStoryteller, this, book, pageNumber));
+        overlayView.identify();
       },
 
       openAndShowBook : function(bookId, pageNumber) {
@@ -58,7 +55,7 @@ define([
       this.router = new Marionette.AppRouter({
         controller : this,
         appRoutes : {
-          '' : 'showLandingPage',
+          '' : 'showBookshelf',
           'stories/:bookId(/:pageNumber)' : 'openAndShowBook'
         }
       });
@@ -77,6 +74,24 @@ define([
 
     function hideOverlay () {
       this.overlayRegion.currentView.hideOverlay();
+    }
+
+    function doShowStoryteller (book, pageNumber) {
+      if(!pageNumber){
+        pageNumber = 0;
+      }
+
+      navigateToBookAtPage.call(this, book.id, pageNumber);
+
+      var storytellerView = new StorytellerView({model : book});
+      storytellerView.startingPage = pageNumber;
+      storytellerView.on("homeButtonTouched", this.showBookshelf, this);
+      storytellerView.on('showVideo', showVideo, this);
+      storytellerView.on("changedPage", function (pageNumber) {
+        navigateToBookAtPage.call(this, book.id, pageNumber);
+      }, this);
+
+      this.mainRegion.show(storytellerView);
     }
 
     return ApplicationController;

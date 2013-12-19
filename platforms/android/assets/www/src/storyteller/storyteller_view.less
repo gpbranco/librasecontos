@@ -1,0 +1,89 @@
+.storyteller {
+  position: relative;
+  min-width: 68em;
+
+  header {
+    position: relative;
+    height: 9em;
+    max-width: 66em;
+
+    h1 {
+      color: white;
+      margin-bottom: 0.3em;
+    }
+  }
+
+  .home-button {
+    background: url('../src/img/home-button.png') no-repeat left top;
+    height: 35px;
+    left: 1em;;
+    position: absolute;
+    top: 50%;
+    width: 35px;
+  }
+
+  .cover-content {
+    position: relative;
+  }
+
+  .book-table {
+    background: url('../src/img/storyboard-bg.png') repeat-x left top;
+    overflow: hidden;
+    position: relative;
+
+    .book-container {
+      margin: 0 auto;
+      padding: 0 6em;
+      position: relative;
+      width: 56em;
+      height: 39em;
+    }
+
+    .book-pages-nav {
+      left: 50%;
+      height: 35px;
+      margin-top: -17px;
+      margin-left: -33em;
+      position: absolute;
+      top: 50%;
+      width: 66em;
+      z-index: 1;
+
+      button{
+        background: url('../src/img/next-page-bt.png') no-repeat left top;
+        height: 100%;
+        width: 35px;
+
+        &:disabled {
+          cursor: auto;
+          opacity: .5;
+        }
+
+        &.prev-page {
+          background: url('../src/img/prev-page-bt.png') no-repeat left top;
+          float: left;
+        }
+
+        &.next-page {
+          float: right;
+        }
+      }
+    }
+
+    select {
+      .gradient(#8560a8, #69468f);
+      border-radius: 5px;
+      display: block;
+      position: relative;
+      margin: 1em auto 2em auto;
+      border: none;
+      color: white;
+      outline: none;
+      padding: .5em;
+
+      option {
+        color: black;
+      }
+    }
+  }
+}

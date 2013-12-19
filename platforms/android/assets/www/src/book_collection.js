@@ -7,11 +7,169 @@ define([
   function getLibrary () {
     return {books : [
     {
+      id : 'kauana-on',
+      title : {
+        text : 'Uma menina chamada Kauana (Online)'
+      },
+      pages : [{
+        type : 'cover',
+        color : 'rgb(128,128,128)',
+        illustration : "capa.png"
+      },{
+        text : "Oi! O meu nome é Kauana, o meu sinal é este.",
+        illustration : "01.png",
+        sw: "sw_01.png",
+        video : {
+          id : "1OXb6ktvT28"
+        }
+      },{
+        text : "Aquela é a minha casa, ela é amarela.",
+        illustration : "02.png",
+        sw: "sw_02.png",
+        video : {
+          id : "z0-0TasW-qc"
+        }
+      },{
+        text : "Olhem, lá está a minha família.",
+        illustration : "03.png",
+        sw: "sw_03.png",
+        video : {
+          id : "SyVm_SnZZao"
+        }
+      },{
+        text : "Este é o meu pai e minha mãe.",
+        illustration : "04.png",
+        sw: "sw_04.png",
+        video : {
+          id : "2pjqM17iBjE"
+        }
+      },{
+        text : "Esta é a minha cachorra, o nome dela é Catucha",
+        illustration : "05.png",
+        sw: "sw_05.png",
+        video : {
+          id : "cbyIXri_SKY"
+        }
+      },{
+        text : "A Catucha é muito levada! Ela gosta de morder meu chinelo",
+        illustration : "06.png",
+        sw: "sw_06.png",
+        video : {
+          id : "i0YeOCMorMQ"
+        }
+      },{
+        text : "Perto da minha casa tem um parquinho.",
+        illustration : "07.png",
+        sw: "sw_07.png",
+        video : {
+          id : "aVm5fa6RARU"
+        }
+      },{
+        text : "Lá estão os meus amiguinhos. O menino é Júlio e a menina é Juju.",
+        illustration : "08.png",
+        sw: "sw_08.png",
+        video : {
+          id : "pCQzTsGZqa8"
+        }
+      },{
+        text : "Tchau! Agora vou brincar no parquinho com meus amiguinhos.",
+        illustration : "09.png",
+        sw: "sw_09.png",
+        video : {
+          id : "KBEsn8O0SaU"
+        }
+      }]
+    },{
+      id : 'kauana-off',
+      title : {
+        text : 'Uma menina chamada Kauana'
+      },
+      pages : [{
+        type : 'cover',
+        color : 'rgb(128,128,128)',
+        illustration : "capa.png"
+      },{
+        text : "Oi! O meu nome é Kauana, o meu sinal é este.",
+        illustration : "01.png",
+        sw: "sw_01.png",
+        video : {
+          type : 'local',
+          id : "01.mp4"
+        }
+      },{
+        text : "Aquela é a minha casa, ela é amarela.",
+        illustration : "02.png",
+        sw: "sw_02.png",
+        video : {
+          type : 'local',
+          id : "02.mp4"
+        }
+      },{
+        text : "Olhem, lá está a minha família.",
+        illustration : "03.png",
+        sw: "sw_03.png",
+        video : {
+          type : 'local',
+          id : "03.mp4"
+        }
+      },{
+        text : "Este é o meu pai e minha mãe.",
+        illustration : "04.png",
+        sw: "sw_04.png",
+        video : {
+          type : 'local',
+          id : "04.mp4"
+        }
+      },{
+        text : "Esta é a minha cachorra, o nome dela é Catucha",
+        illustration : "05.png",
+        sw: "sw_05.png",
+        video : {
+          type : 'local',
+          id : "05.mp4"
+        }
+      },{
+        text : "A Catucha é muito levada! Ela gosta de morder meu chinelo",
+        illustration : "06.png",
+        sw: "sw_06.png",
+        video : {
+          type : 'local',
+          id : "06.mp4"
+        }
+      },{
+        text : "Perto da minha casa tem um parquinho.",
+        illustration : "07.png",
+        sw: "sw_07.png",
+        video : {
+          type : 'local',
+          id : "07.mp4"
+        }
+      },{
+        text : "Lá estão os meus amiguinhos. O menino é Júlio e a menina é Juju.",
+        illustration : "08.png",
+        sw: "sw_08.png",
+        video : {
+          type : 'local',
+          id : "08.mp4"
+        }
+      },{
+        text : "Tchau! Agora vou brincar no parquinho com meus amiguinhos.",
+        illustration : "09.png",
+        sw: "sw_09.png",
+        video : {
+          type : 'local',
+          id : "09.mp4"
+        }
+      }]
+    },{
       id : 'castle',
+      available : false,
       title : {
         text : 'A tempestade no castelo',
         video : {
-          id : "uQVJ5UarJFE"
+          id : "uQVJ5UarJFE",
+          start : 27,
+          end : 34
         }
       },
       pages : [{
@@ -53,6 +211,7 @@ define([
       }]
     },{
       id : 'chapeuzinho',
+      available : false,
       title : {
         text : 'Chapeuzinho Vermelho'
       },
@@ -101,23 +260,8 @@ define([
         }
       },{
         text : 'Só que a casa dela ficava muito longe, lá no bosque.',
-        illustration : '06.jpg',
-        video : {
-          id : "JuCVU9rGUa8",
-          start : 170,
-          end : 175
-        }
+        illustration : '06.jpg'
       }]
-    },{
-      id : 'book3',
-      title : {
-        text : 'Livro 3'
-      },
-    },{
-      id : 'book4',
-      title : {
-        text : 'Livro 4'
-      },
     }]};
   }
 
@@ -139,9 +283,17 @@ define([
     ],
     defaults:{
       id : '',
+      available : true,
       title : {
         text : ''
       }
+    },
+
+    initialize : function () {
+      var pages = this.get('pages');
+      pages.add(new Page({
+        type : 'feedback'
+      }));
     }
   });
 
