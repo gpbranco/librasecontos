@@ -123,7 +123,7 @@ define([
 
     var Page = Backbone.AssociatedModel.extend({
       imagePath : function(image) {
-        return '/histories/'+this.get('path')+'/'+image;
+        return 'histories/'+this.get('path')+'/'+image;
       }
     });
 

@@ -94,7 +94,7 @@ define([
         sw: "sw_01.png",
         video : {
           type : 'local',
-          id : "01.mp4"
+          id : "kauana_01_lowres.mp4"
         }
       },{
         text : "Aquela é a minha casa, ela é amarela.",
@@ -110,7 +110,7 @@ define([
         sw: "sw_03.png",
         video : {
           type : 'local',
-          id : "03.mp4"
+          id : "kauana_01_lowres.mp4"
         }
       },{
         text : "Este é o meu pai e minha mãe.",
