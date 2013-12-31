@@ -56,7 +56,7 @@ define([
       }
 
       if(cover.get('illustration')){
-        var path = '/histories/'+this.model.id+'/'+cover.get('illustration');
+        var path = 'histories/'+this.model.id+'/'+cover.get('illustration');
         this.$el.css('background-image', 'url('+path+')');
       }
 

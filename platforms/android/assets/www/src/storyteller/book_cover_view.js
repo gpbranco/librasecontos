@@ -27,7 +27,7 @@ define([
         var color = this.model.get('color');
         if(!color){ color = 'white'; }
         bg.css('background-color', color);
-
+	
         setupVideo.call(this);
       }
     });
