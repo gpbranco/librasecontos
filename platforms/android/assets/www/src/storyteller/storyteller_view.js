@@ -124,6 +124,10 @@ define([
     var Page = Backbone.AssociatedModel.extend({
       imagePath : function(image) {
         return 'histories/'+this.get('path')+'/'+image;
+      },
+	  videoPath : function(video) {
+        //return '/data/data/com.bravisoftware.librasecontos/files/'+video;
+		return 'file:///android_asset/video/'+video;
       }
     });
 

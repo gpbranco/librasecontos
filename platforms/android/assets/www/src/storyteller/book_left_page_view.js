@@ -34,11 +34,13 @@ define([
       },
 
       onPlayButtonClicked : function() {
-        if(this.player){
+        /*if(this.player){
           this.player.playVideo();
         }else if(this.localPlayer){
           this.localPlayer.play();
-        }
+        }*/
+		
+		window.plugins.videoPlayer.play(data.videoPath);
       },
 
       onPauseButtonClicked : function () {
@@ -70,6 +72,8 @@ define([
       }
     });
 
+	
+	var data = {};
     function handleMedia () {
       var videoData = this.model.get('video');
       var swData = this.model.get('sw');
@@ -117,11 +121,11 @@ define([
     function loadLocalVideo (videoData) {
       var size = videoSize.call(this);
 
-      var data = _.extend({
-        videoPath: this.model.imagePath(videoData.id)
+      data = _.extend({
+        videoPath: this.model.videoPath(videoData.id)
       }, size);
 
-      var playerTemplate = '<video width=<%=width%> height=<%=height%>><source src="<%=videoPath%>" type="video/mp4"></video>';
+      var playerTemplate = '<video width=<%=width%> height=<%=height%>><source src="<%=videoPath%>" type="video/m4v"></video>';
       this.ui.videoPlayer.html(_.template(playerTemplate, data));
 
       var player = this.localPlayer = this.ui.videoPlayer.find('video')[0];

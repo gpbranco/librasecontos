@@ -94,7 +94,7 @@ define([
         sw: "sw_01.png",
         video : {
           type : 'local',
-          id : "kauana_01_lowres.mp4"
+          id : "01.m4v"
         }
       },{
         text : "Aquela é a minha casa, ela é amarela.",
@@ -102,7 +102,7 @@ define([
         sw: "sw_02.png",
         video : {
           type : 'local',
-          id : "02.mp4"
+          id : "02.m4v"
         }
       },{
         text : "Olhem, lá está a minha família.",
@@ -110,7 +110,7 @@ define([
         sw: "sw_03.png",
         video : {
           type : 'local',
-          id : "kauana_01_lowres.mp4"
+          id : "03.m4v"
         }
       },{
         text : "Este é o meu pai e minha mãe.",
@@ -118,7 +118,7 @@ define([
         sw: "sw_04.png",
         video : {
           type : 'local',
-          id : "04.mp4"
+          id : "04.m4v"
         }
       },{
         text : "Esta é a minha cachorra, o nome dela é Catucha",
@@ -126,7 +126,7 @@ define([
         sw: "sw_05.png",
         video : {
           type : 'local',
-          id : "05.mp4"
+          id : "05.m4v"
         }
       },{
         text : "A Catucha é muito levada! Ela gosta de morder meu chinelo",
@@ -134,7 +134,7 @@ define([
         sw: "sw_06.png",
         video : {
           type : 'local',
-          id : "06.mp4"
+          id : "06.m4v"
         }
       },{
         text : "Perto da minha casa tem um parquinho.",
@@ -142,7 +142,7 @@ define([
         sw: "sw_07.png",
         video : {
           type : 'local',
-          id : "07.mp4"
+          id : "07.m4v"
         }
       },{
         text : "Lá estão os meus amiguinhos. O menino é Júlio e a menina é Juju.",
@@ -150,7 +150,7 @@ define([
         sw: "sw_08.png",
         video : {
           type : 'local',
-          id : "08.mp4"
+          id : "08.m4v"
         }
       },{
         text : "Tchau! Agora vou brincar no parquinho com meus amiguinhos.",
@@ -158,7 +158,7 @@ define([
         sw: "sw_09.png",
         video : {
           type : 'local',
-          id : "09.mp4"
+          id : "09.m4v"
         }
       }]
     },{
