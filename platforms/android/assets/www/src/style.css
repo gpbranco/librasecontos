@@ -13,7 +13,6 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 header {
-  margin: 0 auto;
   overflow: auto;
   text-align: center;
 }
@@ -82,7 +81,7 @@ button {
   height: 500px;
 }
 .landing-page .product-description header {
-  width: 70%;
+  
 }
 .landing-page .product-description header h3 {
   font-size: 1.6em;
@@ -299,6 +298,7 @@ button {
   position: relative;
   height: 9em;
   max-width: 55em;
+  margin-left: 5em;
 }
 .storyteller header h1 {
   color: white;
@@ -321,8 +321,8 @@ button {
   position: relative;
 }
 .storyteller .book-table .book-container {
-  margin: 0 auto;
-  padding: 0 6em;
+  margin-left: 1em;
+  padding: 0 2em;
   position: relative;
   width: 56em;
   height: 39em;

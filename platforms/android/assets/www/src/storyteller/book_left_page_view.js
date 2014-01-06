@@ -34,13 +34,12 @@ define([
       },
 
       onPlayButtonClicked : function() {
-        /*if(this.player){
+        if(this.player){
           this.player.playVideo();
         }else if(this.localPlayer){
-          this.localPlayer.play();
-        }*/
+          window.plugins.videoPlayer.play(data.videoPath);
+        }
 		
-		window.plugins.videoPlayer.play(data.videoPath);
       },
 
       onPauseButtonClicked : function () {
